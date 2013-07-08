@@ -77,7 +77,9 @@ article {
     &.prev { position: absolute; right: 0; }
     &.next { position: absolute; left: 0; }
     &[href*=archive] {
-      &:before, &:after { content: '\2014'; padding: 0 .3em; }
+      &:before, &:after { padding: 0 .3em; }
+      &:before { content: '「'; }
+      &:after {content: '」'; }
     }
   }
 }
