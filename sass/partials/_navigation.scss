@@ -1,0 +1,13 @@
+ body > nav {
+  position: absolute !important;
+  top: 1em;
+  width: 100%;
+  li a {
+    color: $link-color !important;
+    &:hover { color: $link-color-hover !important; }
+  }
+}
+
+body {
+  padding-top: 60px;
+}

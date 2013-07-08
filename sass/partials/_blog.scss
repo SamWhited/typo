@@ -1,0 +1,83 @@
+article {
+  h2, h3 {
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+  .entry-title {
+    margin-top: 1.5em;
+  }
+  .meta {
+    color: $text-color-light;
+    font-variant: small-caps;
+  }
+  footer .meta {
+    clear: both;
+    margin: 1em 0;
+  }
+  .post-thumbnail {
+    border-radius: 150px;
+    display: block;
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+    border: none;
+  }
+  .cover-image {
+    width: 640px;
+    a img, img {
+      border: none !important;
+      border-radius: 0 !important;
+      box-shadow: none !important;
+    }
+  }
+  .cover-image[data-caption]::after {
+      content: attr(data-caption);
+      display: block;
+      color: $text-color-light;
+      text-align: right;
+  }
+  @media only screen and (min-width: 768px) {
+    margin-bottom: 1.5em;
+    padding-bottom: 1em;
+  }
+}
+> footer {
+  padding-bottom: 2.5em;
+  margin-top: 2em;
+  @extend .sans;
+  p.meta {
+    margin-bottom: .8em;
+    font-size: .85em;
+    clear: both;
+    overflow: hidden;
+  }
+  .byline + time:before, time +time:before, .comments:before, .byline ~ .categories:before {
+    @extend .separator;
+  }
+}
+
+
+.separator {
+  content: "\2022 ";
+  padding: 0 .4em 0 .2em;
+  display: inline-block;
+}
+
+#content div.pagination {
+  text-align: center;
+  font-size: 1em;
+  position: relative;
+  padding: {top: 1.5em; bottom: 1.5em;}
+  width: 90%;
+  margin: 0 auto;
+  a {
+    text-decoration: none;
+    &.prev { position: absolute; right: 0; }
+    &.next { position: absolute; left: 0; }
+    &[href*=archive] {
+      &:before, &:after { content: '\2014'; padding: 0 .3em; }
+    }
+  }
+}

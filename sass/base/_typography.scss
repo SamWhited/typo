@@ -1,0 +1,113 @@
+$sans: "Helvetica Neue", Arial, sans-serif !default;
+$serif: "adobe-garamond-pro-1","adobe-garamond-pro-2", Georgia, serif !default;
+$mono: Menlo, Monaco, "Andale Mono", "lucida console", "Courier New", monospace !default;
+$heading-font-family: "adobe-garamond-pro-1","adobe-garamond-pro-2", "Georgia", serif !default;
+$header-title-font-family: $heading-font-family !default;
+$header-subtitle-font-family: $heading-font-family !default;
+
+body {
+  font-family: $serif !important;
+}
+
+// Fonts
+.heading {
+  font-family: $heading-font-family;
+}
+.sans { font-family: $sans; }
+.serif { font-family: $serif; }
+.mono { font-family: $mono; }
+
+#{headings()}{
+  @extend .heading;
+  text-rendering: optimizelegibility;
+  font-weight: bold;
+}
+strong { font-weight: bold; }
+em { font-style: italic; }
+sup, sub { font-size: 0.8em; position: relative;  display: inline-block; }
+sup { top: -.5em; }
+sub { bottom: -.5em; }
+
+q { font-style: italic;
+  &:before { content: "\201C"; }
+  &:after { content: "\201D"; }
+}
+
+em, dfn { font-style: italic; }
+strong, dfn { font-weight: bold; }
+del, s { text-decoration: line-through; }
+abbr, acronym { border-bottom: 1px dotted; cursor: help; }
+pre, code, tt { @extend .mono; }
+sub, sup { line-height: 0; }
+
+hr { margin-bottom: 0.2em; }
+
+small { font-size: .8em; }
+big { font-size: 1.2em; }
+
+blockquote {
+  $bq-margin: 1.2em;
+  font-style: italic;
+  position: relative;
+  font-size: 1.2em;
+  line-height: 1.5em;
+  padding-left: 1em;
+  border-left: 4px solid rgba($text-color-light, .5);
+  cite {
+    font-style: italic;
+    a { color: $text-color-light !important; word-wrap: break-word; }
+    &:before { content: '\2014'; padding:{right: .3em; left: .3em;} color: $text-color-light; }
+  }
+  @media only screen and (min-width: 992px) {
+    padding-left: 1.5em;
+    border-left-width: 4px;
+  }
+}
+
+/* Lettrines */
+.lettrine {
+  & > p:first-child::first-letter {
+    line-height: 0.7;
+    margin: 0.225em 0.159em 0 0;
+    float: left;
+    text-transform: capitalize;
+    font-size: 3.15em;
+  }
+}
+
+.pullquote-right:before,
+.pullquote-left:before {
+  /* Reset metrics. */
+  padding: 0;
+  border: none;
+
+  /* Content */
+  content: attr(data-pullquote);
+
+  /* Pull out to the right, modular scale based margins. */
+  float: right;
+  width: 45%;
+  margin: .5em 0 1em 1.5em;
+
+  /* Baseline correction */
+  position: relative;
+  top: 7px;
+  font-size: 1.4em;
+  line-height: 1.45em;
+  font-family: $sans;
+}
+
+.pullquote-left:before {
+  /* Make left pullquotes align properly. */
+  float: left;
+  margin: .5em 1.5em 1em 0;
+}
+
+/* @extend this to force long lines of continuous text to wrap */
+.force-wrap {
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}

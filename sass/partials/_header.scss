@@ -1,0 +1,35 @@
+body > header {
+  margin-bottom: 2em;
+  text-align: center;
+  h1 {
+    &:after {
+      display: block;
+      text-align: center;
+      width: 100%;
+      content: $spacer-char;
+    }
+    a, a:visited, a:hover, a:active, a:focus {
+      color: $title_color;
+      text-decoration: none;
+    }
+    font-family: $header-title-font-family;
+    @media only screen and (min-width: 550px) {
+      font-size: 3em;
+    }
+    font-size: 2em;
+    font-weight: normal;
+    line-height: 1.2em;
+    margin: 0;
+  }
+  h2 {
+    @extend em;
+    @media only screen and (min-width: 550px) {
+      font-size: 1.5em;
+    }
+    font-size: 1em;
+    color: $subtitle-color;
+    font-family: $header-subtitle-font-family;
+    font-weight: normal;
+    margin: .2em 0 0;
+  }
+}

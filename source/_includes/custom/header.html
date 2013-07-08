@@ -1,0 +1,8 @@
+{% if site.header_title %}
+  <h1><a href="{{ root_url }}/">{{ site.header_title }}</a></h1>
+{% else %}
+  <h1><a href="{{ root_url }}/">{{ site.title }}</a></h1>
+{% endif %}
+{% if site.subtitle %}
+  <h2>{{ site.subtitle }}</h2>
+{% endif %}

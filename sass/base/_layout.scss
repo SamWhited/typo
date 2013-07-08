@@ -1,0 +1,77 @@
+.basic-alignment {
+  &.left { float: left; margin-right: 1.5em; }
+  &.right { float: right; margin-left: 1.5em; }
+  &.center { display:block; margin: 0 auto 1.5em; }
+  &.left, &.right { margin-bottom: .8em; }
+}
+
+.hidden {
+  display: none;
+}
+
+.clear {
+  clear: both;
+}
+
+.blog-index {
+  clear: both;
+}
+
+.centering {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+}
+
+#content {
+  #{headings()}, .meta {
+    text-align: center;
+  }
+  .cover-image {
+    margin: 1em auto;
+  }
+  font-size: 1.25em;
+  line-height: 1.5em;
+  margin: 0 auto;
+}
+
+article {
+  text-align: center;
+}
+.entry-content {
+  display: inline-block;
+  text-align: left;
+}
+
+.post-box {
+  &:hover {
+    cursor: pointer;
+  }
+  .entry-content {
+    @media only screen and (min-width: 768px) {
+      margin: 0;
+      width: 100%;
+    }
+    margin: 0 auto;
+    width: 75%;
+  }
+  h1 {
+    font-family: $serif;
+    font-size: 1.5em;
+    font-weight: normal;
+    margin: 0;
+    a {
+      &:hover {
+        color: $text-color-light;
+      }
+      color: $text-color;
+      text-decoration: none;
+    }
+  }
+  .meta {
+    font-size: 1.3em;
+  }
+  min-height: 350px;
+  text-align: center;
+  margin-top: 2em;
+}

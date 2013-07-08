@@ -1,0 +1,24 @@
+---
+layout: default
+single: true
+header: false
+---
+
+<article class="hentry span10 offset1" role="article">
+  {% include article.html %}
+  <footer>
+    <p class="meta">
+      {% include post/author.html %}
+      {% include post/date.html %}{% if updated %}{{ updated }}{% else %}{{ time }}{% endif %}
+      {% include post/categories.html %}
+    </p>
+    <p class="meta">
+      {% if page.next.url %}
+        <a class="basic-alignment left" href="{{page.next.url}}" title="Next Post: {{page.next.title}}">&larr; {{page.next.title}}</a>
+      {% endif %}
+      {% if page.previous.url %}
+        <a class="basic-alignment right" href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">{{page.previous.title}} &rarr;</a>
+      {% endif %}
+    </p>
+  </footer>
+</article>
