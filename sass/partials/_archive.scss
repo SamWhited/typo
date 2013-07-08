@@ -26,6 +26,9 @@
     margin-bottom: .3em;
     text-align: left;
   }
+  footer {
+    text-align: left;
+  }
   a.category, time {
     @extend .sans;
     color: $text-color-light;
