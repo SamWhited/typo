@@ -26,6 +26,7 @@ article {
   }
   .cover-image {
     width: 640px;
+    max-width: 100%;
     a img, img {
       border: none !important;
       border-radius: 0 !important;
