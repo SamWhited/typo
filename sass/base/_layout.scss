@@ -11,6 +11,11 @@
   }
 }
 
+a {
+  transition-property: color;
+  transition-duration: 0.3s;
+}
+
 pre {
   text-align: left;
 }
@@ -96,8 +101,6 @@ article:first-child .post-box {
       &:hover {
         color: $text-color-light;
       }
-      transition-property: color;
-      transition-duration: 0.3s;
       color: $text-color;
       text-decoration: none;
     }
