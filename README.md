@@ -1,6 +1,6 @@
 # typo (tīˈpō)
-n. _Informal_ a simple theme for [Octopress](http://octopress.org/) by
-[Sam Whited](https://samwhited.com).
+n. _Informal_ a simple theme for [Octopress](http://octopress.org/) and
+[Jekyll](http://jekyllrb.com/) by [Sam Whited](https://samwhited.com).
 
 ## Extra requirements
 
