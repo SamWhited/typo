@@ -79,3 +79,18 @@ article {
   min-height: 350px;
   text-align: center;
 }
+
+[contenteditable="true"]:active,
+[contenteditable="true"]:focus {
+  border: 1px solid rgba($link-color, 0.8);
+}
+[contenteditable="true"]:hover,
+[contenteditable="true"]:active,
+[contenteditable="true"]:focus {
+  box-shadow: 0px 1px 1px rgba($link-color-hover, 0.075) inset, 0px 0px 8px rgba($link-color, 0.6);
+  border-radius: 10px 10px 10px 10px;
+}
+[contenteditable="true"] {
+  outline: 0px none;
+  padding: 0px 1em;
+}
