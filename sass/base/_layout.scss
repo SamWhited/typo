@@ -5,6 +5,12 @@
   &.left, &.right { margin-bottom: .8em; }
 }
 
+.hide-mobile {
+  @media only screen and (max-width: 550px) {
+    display: none !important;
+  }
+}
+
 pre {
   text-align: left;
 }
