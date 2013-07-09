@@ -15,7 +15,14 @@ article {
     margin: 1em 0;
   }
   .post-thumbnail {
+    &:hover {
+      border-radius: 1em;
+    }
     border-radius: 150px;
+    transition-property: border-radius;
+    transition-duration: 2s;
+    transition-delay: 0;
+    transition-timing-function: ease-in-out;
     display: block;
     width: 150px;
     height: 150px;
