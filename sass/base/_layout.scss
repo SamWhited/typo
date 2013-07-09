@@ -53,6 +53,10 @@ article {
   text-align: left;
 }
 
+article:first-child .post-box {
+  margin-top: 2em;
+}
+
 .post-box {
   &:hover {
     cursor: pointer;
