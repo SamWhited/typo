@@ -86,8 +86,8 @@ article {
     &.next { position: absolute; left: 0; }
     &[href*=archive] {
       &:before, &:after { padding: 0 .3em; }
-      &:before { content: '「'; }
-      &:after {content: '」'; }
+      &:before { content: '«'; }
+      &:after {content: '»'; }
     }
   }
 }
