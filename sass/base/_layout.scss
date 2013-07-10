@@ -5,6 +5,11 @@
   &.left, &.right { margin-bottom: .8em; }
 }
 
+blockquote {
+  margin: 1em auto;
+  max-width: 50%;
+}
+
 .hide-mobile {
   @media only screen and (max-width: 550px) {
     display: none !important;
