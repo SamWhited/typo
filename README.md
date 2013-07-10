@@ -2,9 +2,11 @@
 n. _Informal_ a simple theme for [Octopress](http://octopress.org/) and
 [Jekyll](http://jekyllrb.com/) by [Sam Whited](https://samwhited.com).
 
+A live preview can be found [here](https://blog.samwhited.com).
+
 ## Extra requirements
 
-This Gem requires that you update your Gemfile with the following changes:
+This theme requires that you update your Gemfile with the following changes:
 
     gem 'liquid', '~> 2.5.0'
 
