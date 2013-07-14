@@ -31,5 +31,5 @@
     {% endif %}
   {% endif %}
 {% else %}
-<div class="entry-content lettrine">{{ content }}</div>
+<div class="entry-content{% unless page.lettrine == false %} lettrine{% endunless %}">{{ content }}</div>
 {% endif %}
