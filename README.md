@@ -33,10 +33,11 @@ Where `post.cover` should link too. If empty (default), no link is generated.
 
 The title text for the cover photo. No title attribute generated if left nil.
 
-    site.cover_width: 640
+    post.lettrine: nil
 
-The width in pixels (don't specify the units) of the cover image displayed above
-each post (does not affect the thumbnail image on the index page).
+Set to false to prevent generation of a lettrine (aka an
+'[Initial](https://en.wikipedia.org/wiki/Initial)') for the first paragraph of a
+post or for the first paragraph following the first h2.
 
     post.thumbnail: nil
 
@@ -55,3 +56,8 @@ differently from the normal blog's title).
 
 The number of posts to include per row on the index page (make sure `paginate`
 is high enough).
+
+    site.cover_width: 640
+
+The width in pixels (don't specify the units) of the cover image displayed above
+each post (does not affect the thumbnail image on the index page).
