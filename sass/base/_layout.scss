@@ -69,12 +69,12 @@ article:first-child .post-box {
 
 .post-box {
   &:hover {
-    .post-thumbnail {
+    .post-thumbnail img {
       border-radius: 1em;
     }
     cursor: pointer;
   }
-  .post-thumbnail {
+  .post-thumbnail img {
     border-radius: 150px;
     transition-property: border-radius;
     transition-duration: 2s;
