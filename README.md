@@ -12,6 +12,11 @@ This theme requires that you update your Gemfile with the following changes:
 
 ## Configuration
 
+    post.content_class: nil
+
+Extra classes to add to the posts `.entry-content` div (eg. for centering
+content: `content_class: centering`).
+
     post.cover: nil
 
 An image to display above the post.
