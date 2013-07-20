@@ -33,6 +33,14 @@ Where `post.cover` should link too. If empty (default), no link is generated.
 
 The title text for the cover photo. No title attribute generated if left nil.
 
+    post.excerpt: nil
+
+Overrides the post excerpt that will be shown on the index page. If this is not
+present then `post.description` is checked, if that is not present then the
+actual excerpt is used. If the actual excerpt or `post.description` are used
+they are stripped of all HTML and limited to `site.excerpt_max_length` words;
+`post.excerpt` on the other hand will use the raw string and ignore length.
+
     post.lettrine: nil
 
 Set to false to prevent generation of a lettrine (aka an
