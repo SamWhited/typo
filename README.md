@@ -12,47 +12,47 @@ This theme requires that you update your Gemfile with the following changes:
 
 ## Configuration
 
-    post.content_class: nil
+    page.content_class: nil
 
 Extra classes to add to the posts `.entry-content` div (eg. for centering
 content: `content_class: centering`).
 
-    post.cover: nil
+    page.cover: nil
 
 An image to display above the post.
 
-    post.cover_alt: nil
+    page.cover_alt: nil
 
 The alt text for the cover photo. Set to an empty string if not present.
 
-    post.cover_caption: nil
+    page.cover_caption: nil
 
 A caption for the photo. Sets the `data-caption` attribute if present which is
 then rendered below the photo using some CSS.
 
-    post.cover_link: nil
+    page.cover_link: nil
 
-Where `post.cover` should link too. If empty (default), no link is generated.
+Where `page.cover` should link too. If empty (default), no link is generated.
 
-    post.cover_title: nil
+    page.cover_title: nil
 
 The title text for the cover photo. No title attribute generated if left nil.
 
-    post.excerpt: nil
+    page.excerpt: nil
 
 Overrides the post excerpt that will be shown on the index page. If this is not
-present then `post.description` is checked, if that is not present then the
-actual excerpt is used. If the actual excerpt or `post.description` are used
+present then `page.description` is checked, if that is not present then the
+actual excerpt is used. If the actual excerpt or `page.description` are used
 they are stripped of all HTML and limited to `site.excerpt_max_length` words;
-`post.excerpt` on the other hand will use the raw string and ignore length.
+`page.excerpt` on the other hand will use the raw string and ignore length.
 
-    post.lettrine: nil
+    page.lettrine: nil
 
 Set to false to prevent generation of a lettrine (aka an
 '[Initial](https://en.wikipedia.org/wiki/Initial)') for the first paragraph of a
 post or for the first paragraph following the first h2.
 
-    post.thumbnail: nil
+    page.thumbnail: nil
 
 An image to display as the 150x150px thumbnail above the post on the index page.
 
