@@ -31,5 +31,5 @@
     {% endif %}
   {% endif %}
 {% else %}
-<div class="entry-content{% unless page.lettrine == false %} lettrine{% endunless %}{% if post.content_class %} {{ post.content_class }}{% endif %}">{{ content }}</div>
+<div class="entry-content{% unless page.lettrine == false %} lettrine{% endunless %}{% if page.content_class %} {{ page.content_class }}{% endif %}">{{ content }}</div>
 {% endif %}
