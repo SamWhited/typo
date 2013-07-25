@@ -9,6 +9,34 @@ body {
   font-family: $serif !important;
 }
 
+.hentry {
+  .entry-title {
+    font-variant: small-caps;
+    font-size: 2em;
+    margin-bottom: 0.5em;
+    letter-spacing: 0.2em;
+    &::first-letter {
+      font-size: 1.5em;
+    }
+  }
+  .entry-content {
+    h2, h3, h4, h5, h6 {
+      font-weight: normal;
+      text-transform: uppercase;
+      letter-spacing: 0.3em;
+    }
+    h2 { font-size: 1em; }
+    h3 { font-size: 0.875em; }
+    h4, h5, h6 { font-size: 0.75em; }
+    h2:before {
+      content: "❦";
+      display: block;
+      font-size: 1em;
+      margin-bottom: 0.7em;
+    }
+  }
+}
+
 // Fonts
 .heading {
   font-family: $heading-font-family;
