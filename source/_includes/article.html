@@ -2,13 +2,13 @@
   <header>
     {% if index %}
       {% if post.thumbnail %}
-      <div class="post-thumbnail"><a href="{{ root_url }}{{ post.url }}"><img alt="" src="{{post.thumbnail}}" width="150"/></a></div>
+      <div class="post-thumbnail"><a href="{{ root_url }}{{ post.url }}"><img alt="" src="{{post.thumbnail}}" width="150" class="img-circle"/></a></div>
       {% endif %}
       <h1 class="entry-title"><a href="{{ root_url }}{{ post.url }}">{% if site.titlecase %}{{ post.title | titlecase }}{% else %}{{ post.title }}{% endif %}</a></h1>
     {% else %}
       {% if page.cover and site.cover_width %}
         <div data-caption="{{ page.cover_caption }}" class="cover-image">
-        {% if page.cover_link %}<a href="{{ page.cover_link }}">{% endif %}<img alt="{% if page.cover_alt %}{{page.cover_alt}}{% endif %}" {% if page.cover_title%}title="{{page.cover_title}}" {% endif %}src="{{ page.cover }}" width="{{ site.cover_width }}"/>{% if page.cover_link %}</a>{% endif %}
+        {% if page.cover_link %}<a href="{{ page.cover_link }}">{% endif %}<img class="img-responsive" alt="{% if page.cover_alt %}{{page.cover_alt}}{% endif %}" {% if page.cover_title%}title="{{page.cover_title}}" {% endif %}src="{{ page.cover }}" width="{{ site.cover_width }}"/>{% if page.cover_link %}</a>{% endif %}
         </div>
       {% endif %}
       <h1 class="entry-title">{% if site.titlecase %}{{ page.title | titlecase }}{% else %}{{ page.title }}{% endif %}</h1>
