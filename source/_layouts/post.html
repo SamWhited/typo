@@ -15,17 +15,17 @@ header: false
     <p class="meta">
       {% if site.pagination_older_right %}
         {% if page.next.url %}
-          <a class="basic-alignment left" href="{{page.next.url}}" title="Next Post: {{page.next.title}}">&larr;<span class="hide-mobile">&nbsp;{{page.next.title}}</span></a>
+          <a class="basic-alignment left" href="{{page.next.url}}" title="Next Post: {{page.next.title}}">&larr;<span class="hidden-sm">&nbsp;{{page.next.title}}</span></a>
         {% endif %}
         {% if page.previous.url %}
-          <a class="basic-alignment right" href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}"><span class="hide-mobile">{{page.previous.title}}&nbsp;</span>&rarr;</a>
+          <a class="basic-alignment right" href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}"><span class="hidden-sm">{{page.previous.title}}&nbsp;</span>&rarr;</a>
         {% endif %}
       {% else %}
         {% if page.previous.url %}
-          <a class="basic-alignment left" href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">&larr;<span class="hide-mobile">&nbsp;{{page.previous.title}}</span></a>
+          <a class="basic-alignment left" href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">&larr;<span class="hidden-sm">&nbsp;{{page.previous.title}}</span></a>
         {% endif %}
         {% if page.next.url %}
-          <a class="basic-alignment right" href="{{page.next.url}}" title="Next Post: {{page.next.title}}"><span class="hide-mobile">{{page.next.title}}&nbsp;</span>&rarr;</a>
+          <a class="basic-alignment right" href="{{page.next.url}}" title="Next Post: {{page.next.title}}"><span class="hidden-sm">{{page.next.title}}&nbsp;</span>&rarr;</a>
         {% endif %}
       {% endif %}
     </p>

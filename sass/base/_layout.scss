@@ -10,12 +10,6 @@ blockquote {
   max-width: 50%;
 }
 
-.hide-mobile {
-  @media only screen and (max-width: 550px) {
-    display: none !important;
-  }
-}
-
 a {
   transition-property: color;
   transition-duration: 0.3s;
