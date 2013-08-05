@@ -4,7 +4,7 @@ single: true
 header: false
 ---
 
-<article class="hentry span10 offset1" role="article">
+<article class="hentry" role="article">
   {% include article.html %}
   <footer>
     <p class="meta">
@@ -12,7 +12,7 @@ header: false
       {% include post/date.html %}{% if updated %}{{ updated }}{% else %}{{ time }}{% endif %}
       {% include post/categories.html %}
     </p>
-    <p class="meta">
+    <p class="meta hidden-print">
       {% if site.pagination_older_right %}
         {% if page.next.url %}
           <a class="basic-alignment left" href="{{page.next.url}}" title="Next Post: {{page.next.title}}">&larr;<span class="hidden-sm">&nbsp;{{page.next.title}}</span></a>
