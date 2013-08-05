@@ -58,14 +58,28 @@ article {
 #content div.pagination {
   text-align: center;
   font-size: 1em;
-  position: relative;
   padding: {top: 1.5em; bottom: 1.5em;}
-  width: 90%;
-  margin: 0 auto;
   a {
+    @media only screen and (min-width: 768px) {
+      display: inline !important;
+    }
     text-decoration: none;
-    &.prev { position: absolute; right: 0; }
-    &.next { position: absolute; left: 0; }
+    &.previous {
+      position: absolute;
+      right: 0;
+      &:after {
+        content: '→';
+        padding-left: .3em;
+      }
+    }
+    &.next {
+      position: absolute;
+      left: 0;
+      &:before {
+        content: '←';
+        padding-right: .3em;
+      }
+    }
     &[href*=archive] {
       &:before, &:after { padding: 0 .3em; }
       &:before { content: '«'; }

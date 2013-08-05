@@ -10,32 +10,32 @@ layout: default
   {% unless forloop.first %}
   </div>
   {% endunless %}
-  <div class="row-fluid">
+  <div class="row">
   {% endif %}
   {% assign content = post.content %}
-    <article class="span3">
+    <article class="col-12 col-lg-3">
     <div class="post-box" data-href="{{ root_url }}{{ post.url }}">
       {% include article.html %}
     </div>
     </article>
   {% endfor %}
   </div>
-  <div class="pagination">
+  <div class="pagination hidden-print">
     {% if site.pagination_older_right %}
       {% if paginator.previous_page %}
-      <a class="next" href="{{paginator.previous_page}}">&larr; Newer</a>
+      <a class="next" href="{{paginator.previous_page}}">Newer</a>
       {% endif %}
       <a href="/blog/archives" class="hidden-sm">Blog Archives</a>
       {% if paginator.next_page %}
-      <a class="prev" href="{{paginator.next_page}}">Older &rarr;</a>
+      <a class="previous" href="{{paginator.next_page}}">Older</a>
       {% endif %}
     {% else %}
       {% if paginator.next_page %}
-      <a class="next" href="{{paginator.next_page}}">&larr; Older</a>
+      <a class="next" href="{{paginator.next_page}}">Older</a>
       {% endif %}
       <a href="/blog/archives" class="hidden-sm">Blog Archives</a>
       {% if paginator.previous_page %}
-      <a class="prev" href="{{paginator.previous_page}}">Newer &rarr;</a>
+      <a class="previous" href="{{paginator.previous_page}}">Newer</a>
       {% endif %}
     {% endif %}
   </div>
