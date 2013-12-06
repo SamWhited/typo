@@ -5,7 +5,12 @@ layout: default
 <div class="blog-index">
   {% assign index = true %}
   {% for post in paginator.posts %}
-  {% assign ind = forloop.index0 | modulo: site.posts_per_row %}
+    {% if site.posts_per_row %}
+      {% assign posts_per_row = site.posts_per_row %}
+    {% else %}
+      {% assign posts_per_row = 4 %}
+    {% endif %}
+  {% assign ind = forloop.index0 | modulo: posts_per_row %}
   {% if ind == 0 %}
   {% unless forloop.first %}
   </div>

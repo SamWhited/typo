@@ -6,9 +6,14 @@
       {% endif %}
       <h1 class="entry-title"><a href="{{ root_url }}{{ post.url }}">{% if site.titlecase %}{{ post.title | titlecase }}{% else %}{{ post.title }}{% endif %}</a></h1>
     {% else %}
-      {% if page.cover and site.cover_width %}
+      {% if site.cover_width %}
+        {% assign cover_width = site.cover_width %}
+      {% else %}
+        {% assign cover_width = 640 %}
+      {% endif %}
+      {% if page.cover %}
         <div data-caption="{{ page.cover_caption }}" class="cover-image">
-        {% if page.cover_link %}<a href="{{ page.cover_link }}">{% endif %}<img alt="{% if page.cover_alt %}{{page.cover_alt}}{% endif %}" {% if page.cover_title%}title="{{page.cover_title}}" {% endif %}src="{{ page.cover }}" width="{{ site.cover_width }}"/>{% if page.cover_link %}</a>{% endif %}
+        {% if page.cover_link %}<a href="{{ page.cover_link }}">{% endif %}<img alt="{% if page.cover_alt %}{{page.cover_alt}}{% endif %}" {% if page.cover_title%}title="{{page.cover_title}}" {% endif %}src="{{ page.cover }}" width="{{ cover_width }}"/>{% if page.cover_link %}</a>{% endif %}
         </div>
       {% endif %}
       <h1 class="entry-title">{% if site.titlecase %}{{ page.title | titlecase }}{% else %}{{ page.title }}{% endif %}</h1>
@@ -24,10 +29,15 @@
   {% if post.excerpt %}
   <div class="entry-content">{{ post.excerpt }}</div>
   {% else %}
-    {% if post.description %}
-    <div class="entry-content">{{ post.description | strip_html | truncatewords: site.excerpt_max_length }}</div>
+    {% if site.excerpt_max_length %}
+      {% assign excerpt_max_length = site.excerpt_max_length %}
     {% else %}
-    <div class="entry-content">{{ content | excerpt | strip_html | truncatewords: site.excerpt_max_length }}</div>
+      {% assign excerpt_max_length = 25 %}
+    {% endif %}
+    {% if post.description %}
+    <div class="entry-content">{{ post.description | strip_html | truncatewords: excerpt_max_length }}</div>
+    {% else %}
+    <div class="entry-content">{{ content | excerpt | strip_html | truncatewords: excerpt_max_length }}</div>
     {% endif %}
   {% endif %}
 {% else %}
