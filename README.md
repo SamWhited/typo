@@ -61,6 +61,11 @@ post or for the first paragraph following the first h2.
 
 An image to display as the 150x150px thumbnail above the post on the index page.
 
+    site.cover_width: 640
+
+The width in pixels (don't specify the units) of the cover image displayed above
+each post (does not affect the thumbnail image on the index page).
+
     site.excerpt_max_length: 25
 
 The number of words from the post excerpt to show on the index page.
@@ -75,7 +80,6 @@ differently from the normal blog's title).
 The number of posts to include per row on the index page (make sure `paginate`
 is high enough).
 
-    site.cover_width: 640
+    site.typekit_kitid: nil
 
-The width in pixels (don't specify the units) of the cover image displayed above
-each post (does not affect the thumbnail image on the index page).
+An Adobe [Typekit](https://typekit.com) kit ID for including webfonts.
