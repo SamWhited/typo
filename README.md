@@ -38,6 +38,11 @@ Where `page.cover` should link too. If empty (default), no link is generated.
 
 The title text for the cover photo. No title attribute generated if left nil.
 
+    page.cover_width: nil
+
+The width in pixels (don't specify the units) of the cover image displayed above
+the post. This overrides `site.cover_width` if present.
+
     page.excerpt: nil
 
 Overrides the post excerpt that will be shown on the index page. If this is not

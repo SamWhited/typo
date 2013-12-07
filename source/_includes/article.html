@@ -6,10 +6,14 @@
       {% endif %}
       <h1 class="entry-title"><a href="{{ root_url }}{{ post.url }}">{% if site.titlecase %}{{ post.title | titlecase }}{% else %}{{ post.title }}{% endif %}</a></h1>
     {% else %}
-      {% if site.cover_width %}
-        {% assign cover_width = site.cover_width %}
+      {% if page.cover_width %}
+        {% assign cover_width = page.cover_width %}
       {% else %}
-        {% assign cover_width = 640 %}
+        {% if site.cover_width %}
+          {% assign cover_width = site.cover_width %}
+        {% else %}
+          {% assign cover_width = 640 %}
+        {% endif %}
       {% endif %}
       {% if page.cover %}
         <div data-caption="{{ page.cover_caption }}" class="cover-image">
