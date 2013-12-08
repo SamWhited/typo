@@ -80,6 +80,13 @@ differently from the normal blog's title).
 The number of posts to include per row on the index page (make sure `paginate`
 is high enough).
 
+    site.search_posts: false
+
+Turn on search suggestions from post titles, excerpts, and descriptions using a
+technique derived from [François Zaninotto](http://redotheweb.com/2013/05/15/client-side-full-text-search-in-css.html)'s
+client side full-text search implementation. For blogs with large numbers of
+posts this may slow down page load times.
+
     site.typekit_kitid: nil
 
 An Adobe [Typekit](https://typekit.com) kit ID for including webfonts.

@@ -1,4 +1,4 @@
- body > nav {
+body > nav {
   position: absolute !important;
   top: 1em;
   width: 100%;
@@ -6,6 +6,12 @@
     color: $link-color !important;
     &:hover { color: $link-color-hover !important; }
   }
+}
+
+#search_listbox {
+  display: none;
+  left: 10px;
+  width: 216px;
 }
 
 body {
