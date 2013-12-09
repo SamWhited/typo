@@ -9,6 +9,12 @@ $(document).ready(function() {
   searchStyle = $("style#search-style");
 
   if (searchStyle.length > 0) {
+    $("input#q").on("focus", function() {
+      $(this).trigger("keyup");
+    });
+    $("input#q").on("blur", function() {
+      $("#search_listbox").fadeOut();
+    });
     $("input#q").on("keyup", function() {
       if (this.value === "") {
         $("#search_listbox").fadeOut(function() {
