@@ -6,7 +6,7 @@
 })();
 
 $(document).ready(function() {
-  searchStyle = $("style#search-style");
+  var searchStyle = $("style#search-style");
 
   if (searchStyle.length > 0) {
     $("input#q").on("focus", function() {
