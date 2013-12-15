@@ -80,12 +80,17 @@ differently from the normal blog's title).
 The number of posts to include per row on the index page (make sure `paginate`
 is high enough).
 
-    site.search_posts: false
+    site.typeahead: false
 
-Turn on search suggestions from post titles, excerpts, and descriptions using a
-technique derived from [François Zaninotto](http://redotheweb.com/2013/05/15/client-side-full-text-search-in-css.html)'s
-client side full-text search implementation. For blogs with large numbers of
-posts this may slow down page load times.
+Turn on search typeahead using post titles, excerpts, and descriptions.
+
+    site.typeahead_items: 8
+
+The max number of items to display in the typeahead dropdown.
+
+    site.typeahead_minLength: 1
+
+The minimum character length needed before triggering autocomplete suggestions.
 
     site.typekit_kitid: nil
 
