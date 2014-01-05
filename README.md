@@ -66,6 +66,10 @@ An image to display as the 150x150px thumbnail above the post on the index page.
 The width in pixels (don't specify the units) of the cover image displayed above
 each post (does not affect the thumbnail image on the index page).
 
+    site.disqus_short_name: nil
+
+An ID for enabling comments with [Disqus](https://disqus.com/).
+
     site.excerpt_max_length: 25
 
 The number of words from the post excerpt to show on the index page.
