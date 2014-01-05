@@ -43,6 +43,10 @@ pre {
   margin: 0 auto;
 }
 
+section#comments {
+	clear: both;
+}
+
 #content {
   #{headings()}, .meta {
     text-align: center;
