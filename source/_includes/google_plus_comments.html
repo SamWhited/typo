@@ -1,0 +1,7 @@
+{% comment %}
+	Load script if Google Plus comments are enabled and `page.comments` is either
+	empty (index) or set to true
+{% endcomment %}
+{% if site.google_plus_comments and page.comments != false %}
+<script src="https://apis.google.com/js/plusone.js"></script>
+{% endif %}

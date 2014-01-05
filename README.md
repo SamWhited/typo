@@ -74,6 +74,10 @@ An ID for enabling comments with [Disqus](https://disqus.com/).
 
 The number of words from the post excerpt to show on the index page.
 
+    site.google_plus_comments: false
+
+Enable comments using Google Plus.
+
     site.header_title: nil
 
 A title to be shown at the top of the index page (in case you want to style it
