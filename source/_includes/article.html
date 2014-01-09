@@ -2,7 +2,7 @@
   <header>
     {% if index %}
       {% if post.thumbnail %}
-      <div class="post-thumbnail"><a href="{{ root_url }}{{ post.url }}"><img alt="" src="{{post.thumbnail}}" width="150"/></a></div>
+      <div {% unless post.square_thumb %}class="post-thumbnail"{% endunless %}><a href="{{ root_url }}{{ post.url }}"><img alt="" src="{{post.thumbnail}}" width="150"/></a></div>
       {% endif %}
       <h1 class="entry-title"><a href="{{ root_url }}{{ post.url }}">{% if site.titlecase %}{{ post.title | titlecase }}{% else %}{{ post.title }}{% endif %}</a></h1>
     {% else %}

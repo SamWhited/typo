@@ -57,6 +57,10 @@ Set to false to prevent generation of a lettrine (aka an
 '[Initial](https://en.wikipedia.org/wiki/Initial)') for the first paragraph of a
 post or for the first paragraph following the first h2.
 
+    page.square_thumb: false
+
+Set this to disable the circular effect on post thumbnails.
+
     page.thumbnail: nil
 
 An image to display as the 150x150px thumbnail above the post on the index page.
