@@ -18,7 +18,7 @@
   {% if site.search_posts %}
   <ul class="dropdown-menu" role="listbox" id="search_listbox">
     {% for post in site.posts %}
-    <li data-index="{{ post.title | strip_html | downcase }} {{ post.excerpt | strip_html | downcase }} {{ post.description | strip_html | downcase }}">
+    <li data-index="{{ post.title | strip_html | downcase | escape }} {{ post.excerpt | strip_html | downcase | escape }} {{ post.description | strip_html | downcase| escape }}">
       <a tabindex="-1" href="{{ post.url }}">{{ post.title | truncate: 25 }}</a>
     </li>
     {% endfor %}
