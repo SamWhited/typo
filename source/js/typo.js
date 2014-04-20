@@ -40,4 +40,48 @@ $(document).ready(function() {
 			}
 		});
 	}
+
+	// Load maps with Mapbox.js
+	if (window.L.mapbox) {
+		$('.map').each(function(index, el) {
+			var map = L.mapbox.map(this, $(this).data('map'));
+			var featureLayer;
+			if ($(this).data('geojson')) {
+				featureLayer = L.mapbox.featureLayer($(this).data('geojson'));
+			} else {
+				featureLayer = L.mapbox.featureLayer();
+			}
+			// Load a URL specified by the `data-src` attribute.
+			if ($(this).data('src')) {
+				featureLayer.loadURL($(this).data('src'));
+			}
+			featureLayer.addTo(map);
+			// If a Mapbox ID was passed in, load markers from it:
+			if ($(this).data('map')) {
+				featureLayer.loadID($(this).data('map'));
+			}
+			// Load GeoJSON from the `data-geojson` attribute.
+			try {
+				map.fitBounds(featureLayer.getBounds());
+			} catch (e) {
+			}
+			// Load GeoJSON from GitHub with the `data-github` attribute.
+			if ($(this).data('github')) {
+				$.ajax({
+					headers: {
+						'Accept': 'application/vnd.github.v3.raw'
+					},
+					dataType: 'json',
+					url: $(this).data('github'),
+					success: function(geojson) {
+						var fl = L.mapbox.featureLayer(geojson).addTo(map);
+						try {
+							map.fitBounds(fl.getBounds());
+						} catch (e) {
+						}
+					}
+				});
+			}
+		});
+	}
 });

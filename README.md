@@ -57,6 +57,22 @@ Set to false to prevent generation of a lettrine (aka an
 '[Initial](https://en.wikipedia.org/wiki/Initial)') for the first paragraph of a
 post or for the first paragraph following the first h2.
 
+    page.mapbox: nil
+
+When set, load [Mapbox.js](https://www.mapbox.com/mapbox.js) for rendering maps.
+By default, we treat any element with the `map` class as a map and load the
+Mapbox ID from that element's `data-map` attribute. If the `data-geojson`
+attribute is present, its value is treated as [GeoJSON](http://geojson.org/) and
+loaded onto the map. GeoJSON files can also be automatically loaded from GitHub
+if a `data-github` attribute is present on the element. This should point to a
+GeoJSON file using the GitHub API, eg:
+`https://api.github.com/repos/mapbox/mapbox.js/contents/test/manual/example.geojson`.
+You can also load a generic GeoJSON file by passing the `data-src` attribute.
+Any URL specified by this attribute is subject to the
+[Same origin policy](https://en.wikipedia.org/wiki/Same_origin_policy) so if the
+JSON is not in the same domain as the script, the server delivering it must
+support CORS.
+
     page.square_thumb: false
 
 Set this to disable the circular effect on post thumbnails.
