@@ -20,23 +20,23 @@ $(document).ready(function() {
 				case 27: // ⎋
 					e.preventDefault();
 					$("#search_listbox").fadeOut();
-				break;
+					break;
 				default:
 					if (this.value === "") {
-					$("#search_listbox").fadeOut(function() {
-						searchStyle.html("");
-					});
-				} else {
-					var searchString = "#search_listbox li:not([data-index*=\"" + (this.value.toLowerCase().replace(/\\/g, "")) + "\"])";
-					if ($(searchString).length < $("#search_listbox li").length) {
-						searchStyle.html(searchString + " { display: none !important; }");
-						$("#search_listbox").fadeIn();
-					} else {
 						$("#search_listbox").fadeOut(function() {
 							searchStyle.html("");
 						});
+					} else {
+						var searchString = "#search_listbox li:not([data-index*=\"" + (this.value.toLowerCase().replace(/\\/g, "")) + "\"])";
+						if ($(searchString).length < $("#search_listbox li").length) {
+							searchStyle.html(searchString + " { display: none !important; }");
+							$("#search_listbox").fadeIn();
+						} else {
+							$("#search_listbox").fadeOut(function() {
+								searchStyle.html("");
+							});
+						}
 					}
-				}
 			}
 		});
 	}
@@ -80,6 +80,18 @@ $(document).ready(function() {
 						} catch (e) {
 						}
 					}
+				});
+			}
+			// Load OSM data from the `data-osm` attribute.
+			if ($(this).data('osm')) {
+				$.getScript('https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-osm/v0.1.0/leaflet-osm.js', function() {
+					$.ajax({
+						url: $(this).data('osm'),
+					dataType: "xml",
+					success: function(xml) {
+						new L.OSM.DataLayer(xml).addTo(map);
+					}
+					});
 				});
 			}
 		});
