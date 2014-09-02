@@ -35,6 +35,11 @@
   }
   color: $text-color-light;
   .entry-content { display: none; }
+	img {
+		width: 5em;
+		height: 5em;
+		margin-right: 1em;
+	}
   time {
     display: block;
     font-size: .9em;
@@ -55,6 +60,9 @@
       float: left;
       &:first-child { padding-top: .75em; }
     }
+		img {
+			float: left;
+		}
     time {
       position: absolute;
       text-align: right;
