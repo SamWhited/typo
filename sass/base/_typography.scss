@@ -82,6 +82,9 @@ blockquote {
   line-height: 1.5em;
   padding-left: 1em;
   border-left: 4px solid rgba($text-color-light, .5);
+	p, div {
+		margin-bottom: 1em;
+	}
   cite {
     font-style: italic;
     a { color: $text-color-light !important; word-wrap: break-word; }
