@@ -9,6 +9,12 @@ body {
   font-family: $serif !important;
 }
 
+.label-info {
+	a {
+		color: #8c0;
+	}
+}
+
 .hentry {
   .entry-title {
     font-variant: small-caps;
