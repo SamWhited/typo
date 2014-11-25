@@ -6,7 +6,7 @@ A live preview can be found [here](https://blog.samwhited.com).
 
 ## Extra requirements
 
-This theme requires that you update your Gemfile with the following changes:
+This theme requires that you update your Gemfile to use a at least liquid 2.5.0:
 
     gem 'liquid', '~> 2.5.0'
 
