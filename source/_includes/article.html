@@ -21,6 +21,7 @@
         </div>
       {% endif %}
       <h1 class="entry-title">{% if site.titlecase %}{{ page.title | titlecase }}{% else %}{{ page.title }}{% endif %}</h1>
+      {% if page.subtitle %}<p class="subtitle">{{ page.subtitle }}</p>{% endif %}
     {% endif %}
     {% unless page.meta == false %}
       <p class="meta">

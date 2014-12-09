@@ -90,6 +90,10 @@ support CORS.
 
 Set this to disable the circular effect on post thumbnails.
 
+    page.subtitle: nil
+
+A subtitle to be shown under the regular title.
+
     page.thumbnail: nil
 
 An image to display as the 150×150px thumbnail above the post on the index page.

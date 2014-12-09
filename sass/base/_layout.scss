@@ -52,7 +52,7 @@ section#comments {
 }
 
 #content {
-  #{headings()}, .meta {
+  #{headings()}, .meta, .subtitle {
     text-align: center;
   }
   .cover-image {
