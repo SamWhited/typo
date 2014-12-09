@@ -43,6 +43,12 @@ The title text for the cover photo. No title attribute generated if left nil.
 The width in pixels (don't specify the units) of the cover image displayed above
 the post. This overrides `site.cover_width` if present.
 
+    page.edge_fonts: nil
+
+An [Adobe Edge Fonts](https://edgewebfonts.adobe.com/) line to import. Eg.
+`advent-pro;aladin`. This does _NOT_ override the site specific option; instead,
+it loads the fonts in addition to any site wide fonts.
+
     page.excerpt: nil
 
 Overrides the post excerpt that will be shown on the index page. If this is not
@@ -54,9 +60,9 @@ they are stripped of all HTML and limited to `site.excerpt_max_length` words;
     page.google_fonts_family: nil
 
 A [Google Fonts](http://www.google.com/fonts#) `family` line to import. Eg.
-`Open+Sans:400,600italic&subset=latin,cyrillic-ext`. This does _NOT_ override a
-site specific option; instead, it loads the font in addition to any site wide
-fonts.
+`Open+Sans:400,600italic&subset=latin,cyrillic-ext`. This does _NOT_ override
+the site specific option; instead, it loads the font in addition to any site
+wide fonts.
 
     page.lettrine: nil
 
@@ -96,6 +102,11 @@ each post (does not affect the thumbnail image on the index page).
     site.disqus_short_name: nil
 
 An ID for enabling comments with [Disqus](https://disqus.com/).
+
+    page.edge_fonts: nil
+
+An [Adobe Edge Fonts](https://edgewebfonts.adobe.com/) line to import. Eg.
+`advent-pro;aladin`.
 
     site.excerpt_max_length: 25
 
