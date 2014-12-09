@@ -126,9 +126,11 @@ img.round {
   @media only screen and (min-width: 768px) {
     margin: 2em;
   }
+  @media only screen and (min-width: 550px) {
+    min-height: 350px;
+  }
   margin-top: 5em;
   min-width: 150px;
-  min-height: 350px;
   text-align: center;
 }
 
