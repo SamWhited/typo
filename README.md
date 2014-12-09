@@ -51,6 +51,13 @@ actual excerpt is used. If the actual excerpt or `page.description` are used
 they are stripped of all HTML and limited to `site.excerpt_max_length` words;
 `page.excerpt` on the other hand will use the raw string and ignore length.
 
+    page.google_fonts_family: nil
+
+A [Google Fonts](http://www.google.com/fonts#) `family` line to import. Eg.
+`Open+Sans:400,600italic&subset=latin,cyrillic-ext`. This does _NOT_ override a
+site specific option; instead, it loads the font in addition to any site wide
+fonts.
+
     page.lettrine: nil
 
 Set to false to prevent generation of a lettrine (aka an
@@ -79,7 +86,7 @@ Set this to disable the circular effect on post thumbnails.
 
     page.thumbnail: nil
 
-An image to display as the 150x150px thumbnail above the post on the index page.
+An image to display as the 150×150px thumbnail above the post on the index page.
 
     site.cover_width: 640
 
@@ -97,6 +104,11 @@ The number of words from the post excerpt to show on the index page.
     site.google_plus_comments: false
 
 Enable comments using Google Plus.
+
+    site.google_fonts_family: nil
+
+A [Google Fonts](http://www.google.com/fonts#) `family` line to import. Eg.
+`Open+Sans:400,600italic&subset=latin,cyrillic-ext`.
 
     site.header_title: nil
 
