@@ -1,5 +1,5 @@
 {% capture category %}{{ post.categories | size }}{% endcapture %}
-{% if post.thumbnail %}<img {% unless post.square_thumb %}class="round"{% endunless %} src="{{ post.thumbnail }}" />{% endif %}
+{% if post.thumbnail %}<a href="{{ root_url }}{{ post.url }}"><img {% unless post.square_thumb %}class="round"{% endunless %} src="{{ post.thumbnail }}" /></a>{% endif %}
 <h1><a href="{{ root_url }}{{ post.url }}">{{post.title}}</a></h1>
 <time datetime="{{ post.date | datetime | date_to_xmlschema }}">{{ post.date | date: "<span class='month'>%b</span> <span class='day'>%d</span> <span class='year'>%Y</span>"}}</time>
 {% if category != '0' %}
