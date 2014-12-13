@@ -1,0 +1,9 @@
+{
+  "src": "{{post.cover|jsonify}}"
+  {% unless post.cover_width == nil %}, "width": "{{post.cover_width|jsonify}}px"{% else %}{% unless site.cover_width == nil %}, "width": "{{site.cover_width|jsonify}}px"{% endunless %}{% endunless %}
+  {% unless post.thumbnail == nil %}, "thumbnail": "{{post.thumbnail|jsonify}}"{% endunless %}
+  {% unless post.cover_title == nil %}, "title": "{{post.cover_title|jsonify}}"{% endunless %}
+  {% unless post.cover_link == nil %}, "link": "{{post.cover_link|jsonify}}"{% endunless %}
+  {% unless post.cover_caption == nil %}, "caption": "{{post.cover_caption|jsonify}}"{% endunless %}
+  {% unless post.cover_alt == nil %}, "alt": "{{post.cover_alt|jsonify}}"{% endunless %}
+}

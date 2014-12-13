@@ -86,6 +86,10 @@ Any URL specified by this attribute is subject to the
 JSON is not in the same domain as the script, the server delivering it must
 support CORS.
 
+    page.cover_in_gallery: true
+
+Include or exclude the pages cover photo from the gallery.
+
     page.square_thumb: false
 
 Set this to disable the circular effect on post thumbnails.
