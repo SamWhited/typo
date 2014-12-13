@@ -1,0 +1,23 @@
+---
+layout: page
+title: Gallery
+footer: false
+bootstrap: true
+---
+
+<div id="blog-gallery" class="carousel slide">
+  <div class="carousel-inner">
+    {% for post in site.posts reverse %}{% unless post.cover_in_gallery == false %}{% unless post.cover == nil %}
+    <div class="item{% if forloop.first %} active{% endif %}">
+      <img alt="{{post.cover_alt|jsonify}}" src="{{post.cover}}" />
+      <div class="carousel-caption">
+        {% if post.cover_caption %}<p>{{post.cover_caption}}</p>{% endif %}
+        <p>From “<a href="{{post.url}}">{{post.title}}</a>”</p>
+      </div>
+    </div>
+    {% endunless %}{% endunless %}{% endfor %}
+  </div>
+  <!-- Carousel nav -->
+  <a class="carousel-control left" href="#blog-gallery" data-slide="prev">&lsaquo;</a>
+  <a class="carousel-control right" href="#blog-gallery" data-slide="next">&rsaquo;</a>
+</div>

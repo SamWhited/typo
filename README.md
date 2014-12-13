@@ -12,6 +12,11 @@ This theme requires that you update your Gemfile to use a at least liquid 2.5.0:
 
 ## Configuration
 
+    page.bootstrap: false
+
+If true, load [Bootstrap.js](http://getbootstrap.com/2.3.2/javascript.html) on
+the current page.
+
     page.content_class: nil
 
 Extra classes to add to the posts `.entry-content` div (eg. for centering
@@ -101,6 +106,10 @@ A subtitle to be shown under the regular title.
     page.thumbnail: nil
 
 An image to display as the 150×150px thumbnail above the post on the index page.
+
+    site.bootstrap: false
+
+If true, load Bootstrap.js on all pages.
 
     site.cover_width: 640
 

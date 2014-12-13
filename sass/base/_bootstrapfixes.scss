@@ -1,3 +1,6 @@
 .dl-horizontal dd {
-	text-align: left;
+  text-align: left;
+}
+.carousel-inner > .item > img, .carousel-inner > .item > a > img {
+  margin: 0 auto;
 }

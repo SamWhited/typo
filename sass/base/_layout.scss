@@ -41,6 +41,12 @@ pre {
   clear: both;
 }
 
+#blog-gallery {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 640px;
+}
+
 .centering {
   display: block;
   text-align: center !important;
