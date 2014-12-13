@@ -2,6 +2,9 @@
   #content > div { &, > article { padding-top: 0; } }
 }
 #blog-archives {
+  @media only screen and (max-width: 550px) {
+    text-align: center;
+  }
   article {
     border-bottom: 1px solid $text-color-light;
     padding: 1em 0 1em;
@@ -24,10 +27,14 @@
     color: $text-color;
     font-size: 1.5em;
     margin-bottom: .3em;
-    text-align: left;
+    @media only screen and (min-width: 550px) {
+      text-align: left;
+    }
   }
   footer {
-    text-align: left;
+    @media only screen and (min-width: 550px) {
+      text-align: left;
+    }
   }
   a.category, time {
     @extend .sans;
@@ -35,16 +42,18 @@
   }
   color: $text-color-light;
   .entry-content { display: none; }
-	img {
-		width: 5em;
-		height: 5em;
-		margin-right: 1em;
-	}
+  img {
+    width: 5em;
+    height: 5em;
+    margin-right: 1em;
+  }
   time {
     display: block;
     font-size: .9em;
     line-height: 1.2em;
-    text-align: left;
+    @media only screen and (min-width: 550px) {
+      text-align: left;
+    }
     .month, .day { display: inline-block; }
     .month { text-transform: uppercase; }
   }
@@ -60,12 +69,14 @@
       float: left;
       &:first-child { padding-top: .75em; }
     }
-		img {
-			float: left;
-		}
+    img {
+      float: left;
+    }
     time {
       position: absolute;
-      text-align: right;
+      @media only screen and (min-width: 550px) {
+        text-align: left;
+      }
       left: 0em;
       top: 2.5em;
     }
@@ -73,8 +84,8 @@
     article {
       padding:{left: 4.5em; bottom: .7em;}
     }
-  a.category {
-    line-height: 1.1em;
+    a.category {
+      line-height: 1.1em;
     }
   }
 }
