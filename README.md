@@ -143,6 +143,13 @@ A [Google Fonts](http://www.google.com/fonts#) `family` line to import. Eg.
 A title to be shown at the top of the index page (in case you want to style it
 differently from the normal blog's title).
 
+    site.openid_server: nil
+		site.openid_delegate: nil
+
+Specifies an [OpenID](https://openid.net/) provider to delegate OpenID 1.1 and
+2.0 requests to (support for OpenID Connect requires a separate WebFinger file
+which you can create yourself).
+
     site.posts_per_row: 4
 
 The number of posts to include per row on the index page (make sure `paginate`
