@@ -144,7 +144,7 @@ A title to be shown at the top of the index page (in case you want to style it
 differently from the normal blog's title).
 
     site.openid_server: nil
-		site.openid_delegate: nil
+    site.openid_delegate: nil
 
 Specifies an [OpenID](https://openid.net/) provider to delegate OpenID 1.1 and
 2.0 requests to (support for OpenID Connect requires a separate WebFinger file
