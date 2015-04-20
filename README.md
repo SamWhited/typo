@@ -165,3 +165,11 @@ posts this may slow down page load times.
     site.typekit_kitid: nil
 
 An Adobe [Typekit](https://typekit.com) kit ID for including webfonts.
+
+## Attributes
+
+    h2 data-accent="string"
+
+Any `h2` element inside of a posts content is prefixed with `❦` by default.
+Adding a `data-accent` tag to the `h2` can be used to customize this accent
+character.
