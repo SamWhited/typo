@@ -173,3 +173,10 @@ An Adobe [Typekit](https://typekit.com) kit ID for including webfonts.
 Any `h2` element inside of a posts content is prefixed with `❦` by default.
 Adding a `data-accent` tag to the `h2` can be used to customize this accent
 character.
+
+    div data-caption="string"
+
+Adds some text after the div. Useful for adding captions to images. This also
+works for `a` and `img` tags but isn't recommended (note that some browsers,
+most notably Firefox, won't allow the `before` and `after` psudo elements to
+have content if the original element cannot have content, eg. `img` tags).

@@ -23,7 +23,7 @@ article {
       box-shadow: none !important;
     }
   }
-  .cover-image[data-caption]::after {
+  div[data-caption]:after, a[data-caption]:after, img[data-caption]:after {
       content: attr(data-caption);
       display: block;
       color: $text-color-light;
