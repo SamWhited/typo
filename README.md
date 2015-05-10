@@ -12,6 +12,11 @@ This theme requires that you update your Gemfile to use a at least liquid 2.5.0:
 
 ## Configuration
 
+    page.article_class: nil
+
+Extra classes to add to the posts overall article element (eg. to center the
+post, but keep text left aligned: `article_class: centering`).
+
     page.bootstrap: false
 
 If true, load [Bootstrap.js](http://getbootstrap.com/2.3.2/javascript.html) on

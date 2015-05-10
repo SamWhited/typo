@@ -4,7 +4,7 @@ single: true
 header: false
 ---
 
-<article class="hentry span10 offset1" role="article">
+<article class="hentry span10 offset1{% if page.article_class %} {{ page.article_class }}{% endif %}" role="article">
   {% include article.html %}
   <footer>
     <p class="meta">
