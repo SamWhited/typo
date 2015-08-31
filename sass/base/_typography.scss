@@ -4,15 +4,16 @@ $mono: Menlo, Monaco, "Andale Mono", "lucida console", "Courier New", monospace 
 $heading-font-family: "adobe-garamond-pro-1","adobe-garamond-pro-2", "Georgia", serif !default;
 $header-title-font-family: $heading-font-family !default;
 $header-subtitle-font-family: $heading-font-family !default;
+$symbol: "adobe-garamond-pro-1","adobe-garamond-pro-2", Georgia, serif, "symbola" !default;
 
 body {
   font-family: $serif !important;
 }
 
 .label-info {
-	a {
-		color: #8c0;
-	}
+  a {
+    color: #8c0;
+  }
 }
 
 .hentry {
@@ -26,12 +27,12 @@ body {
     }
   }
   .entry-content {
-		h1, h2, h3, h4, h5, h6 {
+    h1, h2, h3, h4, h5, h6 {
       a:not([href]) {
         color: inherit;
         text-decoration: none;
       }
-		}
+    }
     h2, h3, h4, h5, h6 {
       font-weight: normal;
       text-transform: uppercase;
@@ -43,12 +44,14 @@ body {
     h4, h5, h6 { font-size: 0.75em; }
     h2:before {
       content: "❦";
+      font-family: $symbol !important;
       display: block;
       font-size: 1em;
       margin-bottom: 0.7em;
     }
     h2[data-accent]:before {
       content: attr(data-accent);
+      font-family: $symbol !important;
       display: block;
       font-size: 1em;
       margin-bottom: 0.7em;
@@ -100,9 +103,9 @@ blockquote {
   line-height: 1.5em;
   padding-left: 1em;
   border-left: 4px solid rgba($text-color-light, .5);
-	p, div {
-		margin-bottom: 1em;
-	}
+  p, div {
+    margin-bottom: 1em;
+  }
   cite {
     font-style: italic;
     a { color: $text-color-light !important; word-wrap: break-word; }
