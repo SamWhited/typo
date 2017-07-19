@@ -1,8 +1,12 @@
 # typo (tīˈpō)
 n. _Informal_ a simple theme for [Octopress](http://octopress.org/) and
-[Jekyll](http://jekyllrb.com/) by [Sam Whited](https://samwhited.com).
+[Jekyll](http://jekyllrb.com/) by [Sam Whited](https://blog.samwhited.com).
 
-A live preview can be found [here](https://blog.samwhited.com).
+A live preview can be found
+[here](https://web.archive.org/web/20170719001930/https://blog.samwhited.com/).
+
+**BE ADVISED:** This theme is no longer maintained. If you run into problems, I
+may or may not be able to help. Use at your own risk.
 
 ## Extra requirements
 
