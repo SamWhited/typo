@@ -5,6 +5,8 @@ n. _Informal_ a simple theme for [Octopress](http://octopress.org/) and
 A live preview can be found
 [here](https://web.archive.org/web/20170719001930/https://blog.samwhited.com/).
 
+[![Buy Me A Coffee](https://www.buymeacoffee.com/assets/img/custom_images/purple_img.png)](https://www.buymeacoffee.com/samwhited)
+
 **BE ADVISED:** This theme is no longer maintained. If you run into problems, I
 may or may not be able to help. Use at your own risk.
 
